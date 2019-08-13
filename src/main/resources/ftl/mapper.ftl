@@ -3,6 +3,6 @@
 <mapper namespace="com.demo.mapper.${className}Mapper">
 
     <update id="delete${className}ById" parameterType="java.lang.Long">
-        update ${tableName} set delete_flag = '0' where id = ${'#'}${'{'}value${'}'}
+        update ${tableName} set delete_flag = '0' where id = ${'#'}${'{'}id${'}'}
     </update>
 </mapper>
