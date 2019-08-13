@@ -1,5 +1,6 @@
 package com.demo.mapper;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
@@ -18,7 +19,7 @@ import java.math.BigDecimal;
 public class ${className}{
 <#list primaries as value>
 
-    @TableId(value="${value.fieldName}")
+    @TableId(value = "${value.fieldName}", type = IdType.AUTO)
     @ApiModelProperty("${value.comments}")
     private ${value.fieldType} ${value.fieldName};
 </#list>
